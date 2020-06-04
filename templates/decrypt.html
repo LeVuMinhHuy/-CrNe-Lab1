@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<style>
+    h2 {text-align: center;}
+    form {text-align: center;}
+    p {text-align: center;}
+</style>
+
+<head>
+    <meta charset = "UTF-8">
+    <title>
+        Decrypt
+    </title>
+</head>
+
+<body>
+    <h4>Le Vu Minh Huy | 1711495</h4>
+    <h2>Assignment 01</h2>
+    <form id = "decrypt-form" action = "{{ url_for('decrypt') }}" method = "POST" enctype = "multipart/form-data">
+        You have Secret Key? <br>
+        <input type="hidden" name = "path" value = {{file_name}}>
+        <input type="hidden" name = "mdhashOld" value = {{md5hash}}>
+        <input type = "text" name = "key">
+        <input type = "submit" value = "send">
+
+    </form>
+</body>
+    
+</html>

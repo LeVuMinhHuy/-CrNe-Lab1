@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<htm lang = "en">
+<style>
+    h2 {text-align: center;}
+    form {text-align: center;}
+</style>
+
+<head>
+    <meta charset = "UTF-8">
+    <title>
+        Encrypt
+    </title>
+</head>
+
+<body>
+    <h4>Le Vu Minh Huy | 1711495</h4>
+    <h2>Assignment 01</h2>
+
+    <form id = "encrypt-form" action = "{{ url_for('encrypt') }}" method = "POST" enctype = "multipart/form-data">
+        <p><b>Encrypt File</b></p>
+        <p>Folder</p>
+        <input type="file" name = "folder" webkitdirectory directory multiple>
+        <p>File</p>
+        <input type = "file" name = "file" multiple> 
+        <p>Key:</p>
+        <p>This is auto random key, you can replace it by your key</p>
+        <input type = "text" name = "key" size = "60" value="{{ranKey}}">
+
+        <input type = "submit" value = "send">
+    </form>
+</body>
+    
+</html>
